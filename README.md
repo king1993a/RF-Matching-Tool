@@ -1,4 +1,4 @@
-RF-Matching-Tool (RF 阻抗匹配自動化與視覺化工具)<br>
+RF-Matching-Tool (自動化 RF 阻抗匹配計算與視覺化工具)<br>
 這是一個基於 Python 開發的射頻阻抗匹配工具，旨在自動化計算 L-Match 匹配網路參數，並提供直觀的史密斯圖 (Smith Chart) 軌跡視覺化。本工具特別適用於高頻電路設計前期，快速評估元件數值與匹配路徑。<br>
 核心功能 (Core Features)自動化匹配計算：支援複數源阻抗 ($Z_S$) 與負載阻抗 ($Z_L$) 的共軛匹配計算。<br>
 拓樸自動切換：根據負載在史密斯圖上的位置，自動判斷並切換 L-Match 拓樸（如 Shunt-Series 或 Series-Shunt），以確保路徑避開匹配禁區。<br>
