@@ -4,15 +4,20 @@ RF-Matching-Tool (RF 阻抗匹配自動化與視覺化工具)<br>
 拓樸自動切換：根據負載在史密斯圖上的位置，自動判斷並切換 L-Match 拓樸（如 Shunt-Series 或 Series-Shunt），以確保路徑避開匹配禁區。<br>
 路徑視覺化：整合 matplotlib 與 scikit-rf，動態繪製阻抗移動軌跡（恆定電阻/電導圓弧線）。<br>
 元件數值轉換：自動根據操作頻率（如 2.4 GHz 或 28 GHz）將電抗值轉換為實體 SMD 元件數值（nH/pF）。<br>
-技術堆疊 (Tech Stack)<br>
-Python 3.xNumpy: 處理複數阻抗矩陣運算。<br>
+Python 3.14.4<br>
+Numpy: 處理複數阻抗矩陣運算。<br>
 Matplotlib: 負責繪製高品質的史密斯圖與軌跡曲線。<br>
 scikit-rf (skrf): 提供標準的射頻工程計算與座標轉換。<br>
-實作原理 (Implementation Logic)本工具透過解析幾何方式模擬元件在史密斯圖上的移動：<br>
+實作原理：本工具透過解析幾何方式模擬元件在史密斯圖上的移動：<br>
 並聯電容/電感：阻抗沿著恆定電導圓 (Constant Admittance Circle) 移動。<br>
 串聯電容/電感：阻抗沿著恆定電阻圓 (Constant Resistance Circle) 移動。<br>
 程式會自動迭代尋找這兩條圓弧的交點，從而得出精確的元件數值。<br>
 使用範例 (Usage Example)<br>
-# 範例：將 10 + 5j Ohm 匹配至 200 - 8j Ohm (於 2.4 GHz)<br>
-    solve_and_plot_matching(ZS=10+5j, ZL=200-8j, freq=2.4e9)<br>
-    
+範例：將 10 + 5j Ohm 匹配至 200 - 8j Ohm (於 2.4 GHz)<br>
+```solve_and_plot_matching(ZS=10+5j, ZL=200-8j, freq=2.4e9)```<br>
+方案    | 拓樸              | Step 1 (Load)      | Step 2 (Source)    | S11    <br> 
+---------------------------------------------------------------------------<br>
+1      | Shunt-Series    | 1.43 pF (C)        | 2.56 nH (L)        | -299.3dB<br>
+2      | Shunt-Series    | 3.02 nH (L)        | 1.36 pF (C)        | -299.3dB<br>
+<img width="820" height="831" alt="image" src="https://github.com/user-attachments/assets/39a3432f-db88-46be-ad72-eed34445de92" /><br>
+
