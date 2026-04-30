@@ -15,9 +15,8 @@ scikit-rf (skrf): 提供標準的射頻工程計算與座標轉換。<br>
 使用範例 (Usage Example)<br>
 範例：將 10 + 5j Ohm 匹配至 200 - 8j Ohm (於 2.4 GHz)<br>
 ```solve_and_plot_matching(ZS=10+5j, ZL=200-8j, freq=2.4e9)```<br>
-方案    | 拓樸              | Step 1 (Load)      | Step 2 (Source)    | S11    <br> 
----------------------------------------------------------------------------<br>
-1      | Shunt-Series    | 1.43 pF (C)        | 2.56 nH (L)        | -299.3dB<br>
-2      | Shunt-Series    | 3.02 nH (L)        | 1.36 pF (C)        | -299.3dB<br>
+
+<img width="554" height="137" alt="image" src="https://github.com/user-attachments/assets/a8bc0a02-1711-440e-b9d8-c79f4a559fe2" /><br>
+
 ![Matching Result](./smith_chart.jpg)<br>
 
