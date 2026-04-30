@@ -19,5 +19,5 @@ scikit-rf (skrf): 提供標準的射頻工程計算與座標轉換。<br>
 ---------------------------------------------------------------------------<br>
 1      | Shunt-Series    | 1.43 pF (C)        | 2.56 nH (L)        | -299.3dB<br>
 2      | Shunt-Series    | 3.02 nH (L)        | 1.36 pF (C)        | -299.3dB<br>
-<img width="820" height="831" alt="image" src="https://github.com/user-attachments/assets/39a3432f-db88-46be-ad72-eed34445de92" /><br>
+![Matching Result](./smith_chart.jpg)<br>
 
