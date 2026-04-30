@@ -12,7 +12,7 @@ scikit-rf (skrf): 提供標準的射頻工程計算與座標轉換。<br>
 並聯電容/電感：阻抗沿著恆定電導圓 (Constant Admittance Circle) 移動。<br>
 串聯電容/電感：阻抗沿著恆定電阻圓 (Constant Resistance Circle) 移動。<br>
 程式會自動迭代尋找這兩條圓弧的交點，從而得出精確的元件數值。<br>
-使用範例 (Usage Example)<br>
+# 使用範例 (Usage Example)<br>
 範例：將 10 + 5j Ohm 匹配至 200 - 8j Ohm (於 2.4 GHz)<br>
 ```solve_and_plot_matching(ZS=10+5j, ZL=200-8j, freq=2.4e9)```<br>
 
